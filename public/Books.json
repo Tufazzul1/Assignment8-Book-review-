@@ -1,0 +1,146 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "image": "https://i.ibb.co/F462D4f/pngwing-1.png",
+    "review": "To Kill a Mockingbird is a timeless classic that delves into themes of racial injustice, morality, and compassion. Harper Lee's masterful storytelling and vivid characters captivate readers from beginning to end. Through the eyes of Scout Finch, the novel explores the complexities of human nature and challenges societal norms. With its poignant narrative and powerful message, To Kill a Mockingbird continues to resonate with readers of all ages.",
+    "totalPages": 281,
+    "rating": 5,
+    "category": "Fiction",
+    "tags": [
+      "Classics",
+      "Social Issues"
+    ],
+    "publisher": "J. B. Lippincott & Co.",
+    "yearOfPublishing": 1960
+  },
+  {
+    "bookId": 2,
+    "bookName": "1984",
+    "author": "George Orwell",
+    "image": "https://i.ibb.co/xKZ77KC/kindpng-7318921.png",
+    "review": "George Orwell's dystopian masterpiece, 1984, paints a chilling picture of a totalitarian society where freedom and individuality are suppressed. Through the protagonist, Winston Smith, Orwell explores themes of surveillance, propaganda, and the erosion of truth. The novel's stark portrayal of oppression and thought control serves as a stark warning against authoritarianism and the dangers of unchecked power. 1984 remains as relevant today as it was when it was first published.",
+    "totalPages": 328,
+    "rating": 4.5,
+    "category": "Science Fiction",
+    "tags": [
+      "Dystopian",
+      "Political"
+    ],
+    "publisher": "Secker & Warburg",
+    "yearOfPublishing": 1949
+  },
+  {
+    "bookId": 3,
+    "bookName": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://i.ibb.co/kBWS0k5/kindpng-1064993.png",
+    "review": "The Great Gatsby is a tragic tale of love, wealth, and the American Dream set in the Jazz Age. F. Scott Fitzgerald's lyrical prose and vivid imagery transport readers to the opulent world of Jay Gatsby and the disillusioned Nick Carraway. Through its exploration of themes such as ambition, class, and identity, the novel offers a scathing critique of the Roaring Twenties. The Great Gatsby remains a timeless classic that continues to captivate readers with its poignant narrative and complex characters.",
+    "totalPages": 180,
+    "rating": 4.8,
+    "category": "Fiction",
+    "tags": [
+      "Romance",
+      "Historical"
+    ],
+    "publisher": "Charles Scribner's Sons",
+    "yearOfPublishing": 1925
+  },
+  {
+    "bookId": 4,
+    "bookName": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "image": "https://i.ibb.co/wsZDMgk/kindpng-4022054-1.png",
+    "review": "Pride and Prejudice is a timeless romance that explores themes of love, marriage, and social class in early 19th-century England. Jane Austen's sharp wit and keen observation of human nature are on full display as she navigates the intricacies of relationships and societal expectations. Through the spirited Elizabeth Bennet and the enigmatic Mr. Darcy, Austen crafts a tale of misunderstandings, second chances, and the triumph of love over prejudice. Pride and Prejudice remains a beloved classic that continues to enchant readers with its charm and wit.",
+    "totalPages": 279,
+    "rating": 4.7,
+    "category": "Romance",
+    "tags": [
+      "Regency",
+      "Comedy of Manners"
+    ],
+    "publisher": "T. Egerton, Whitehall",
+    "yearOfPublishing": 1813
+  },
+  {
+    "bookId": 5,
+    "bookName": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "image": "https://i.ibb.co/ts9BvLx/kindpng-81724-1.png",
+    "review": "Harry Potter and the Philosopher's Stone is the enchanting beginning to J.K. Rowling's beloved series. The story follows young Harry Potter as he discovers his magical heritage and embarks on a thrilling adventure at Hogwarts School of Witchcraft and Wizardry. Rowling's imaginative world-building and memorable characters have captivated readers of all ages, transporting them to a world of wonder and magic. With its themes of friendship, bravery, and the battle between good and evil, Harry Potter and the Philosopher's Stone is a modern classic that continues to inspire readers worldwide.",
+    "totalPages": 223,
+    "rating": 4.9,
+    "category": "Fantasy",
+    "tags": [
+      "Magic",
+      "Coming of Age"
+    ],
+    "publisher": "Bloomsbury",
+    "yearOfPublishing": 1997
+  },
+  {
+    "bookId": 6,
+    "bookName": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "https://i.ibb.co/dpThcTr/kindpng-2193744-1.png",
+    "review": "The Catcher in the Rye is a provocative coming-of-age novel that explores themes of alienation, identity, and the search for authenticity. J.D. Salinger's iconic protagonist, Holden Caulfield, offers a candid and often cynical perspective on the adult world as he navigates the challenges of adolescence. Through Holden's introspective journey, Salinger confronts the hypocrisy and phoniness of society, delivering a poignant critique of conformity and superficiality. The Catcher in the Rye continues to resonate with readers for its raw honesty and timeless portrayal of youth.",
+    "totalPages": 277,
+    "rating": 4.6,
+    "category": "Fiction",
+    "tags": [
+      "Coming of Age",
+      "American Literature"
+    ],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  },
+  {
+    "bookId": 7,
+    "bookName": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "image": "https://i.ibb.co/F462D4f/pngwing-1.png",
+    "review": "The Hobbit is a captivating fantasy adventure that transports readers to the enchanting world of Middle-earth. J.R.R. Tolkien's rich imagination and intricate world-building bring to life the epic quest of Bilbo Baggins as he embarks on a journey to reclaim the lost kingdom of Erebor. Along the way, Bilbo encounters magical creatures, treacherous foes, and unexpected allies, all against the backdrop of a looming darkness that threatens to engulf the land. With its timeless themes of courage, friendship, and heroism, The Hobbit is a classic tale that continues to inspire readers of all ages.",
+    "totalPages": 310,
+    "rating": 4.8,
+    "category": "Fantasy",
+    "tags": [
+      "Adventure",
+      "Epic"
+    ],
+    "publisher": "George Allen & Unwin",
+    "yearOfPublishing": "1937"
+  },
+  {
+    "bookId": 8,
+    "bookName": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "image": "https://i.ibb.co/ts9BvLx/kindpng-81724-1.png",
+    "review": "The Lord of the Rings is an epic high-fantasy trilogy that has captivated readers for generations. J.R.R. Tolkien's richly imagined world of Middle-earth is brought to life through intricate storytelling, detailed world-building, and unforgettable characters. The trilogy follows the perilous journey of Frodo Baggins and the Fellowship of the Ring as they seek to destroy the One Ring and defeat the dark lord Sauron. With its themes of friendship, sacrifice, and the battle between good and evil, The Lord of the Rings remains a masterpiece of literature that continues to inspire readers around the world.",
+    "totalPages": 1178,
+    "rating": 4.9,
+    "category": "Fantasy",
+    "tags": [
+      "Adventure",
+      "Epic"
+    ],
+    "publisher": "George Allen & Unwin",
+    "yearOfPublishing": "1954"
+  },
+  {
+    "bookId": 9,
+    "bookName": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "https://i.ibb.co/xKZ77KC/kindpng-7318921.png",
+    "review": "The Catcher in the Rye is a provocative coming-of-age novel that explores themes of alienation, identity, and the search for authenticity. J.D. Salinger's iconic protagonist, Holden Caulfield, offers a candid and often cynical perspective on the adult world as he navigates the challenges of adolescence. Through Holden's introspective journey, Salinger confronts the hypocrisy and phoniness of society, delivering a poignant critique of conformity and superficiality. The Catcher in the Rye continues to resonate with readers for its raw honesty and timeless portrayal of youth.",
+    "totalPages": 277,
+    "rating": 4.6,
+    "category": "Fiction",
+    "tags": [
+      "Coming of Age",
+      "American Literature"
+    ],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": "1951"
+  }
+]
