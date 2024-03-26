@@ -4,29 +4,30 @@ import { getStoredReadBook } from "../../Utility/Localstorage";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import ReadBooks from '../ReadBooks/ReadBooks';
+import WishList from '../WishList/WishList';
+
 
 const ListedBooks = () => {
-
     const [tabIndex, setTabIndex] = useState(0);
-
     const books = useLoaderData();
-
-    const [readBooks, setReadBooks] = useState([])
+    const [readBooks, setReadBooks] = useState([]);
+    const [wishlistBooks, setWishlistBooks] = useState([]);
 
     useEffect(() => {
         const storedBookId = getStoredReadBook();
-        console.log(storedBookId)
-        if (books.lenght > 0) {
-            const readBooks = books.filter(book => storedBookId.includes(book.bookId))
-            console.log(books, storedBookId, readBooks)
+        if (books.length > 0) {
+            const readBooks = books.filter(book => storedBookId.includes(book.bookId));
+            const wishlistBooks = books.filter(book => !storedBookId.includes(book.bookId));
+            setReadBooks(readBooks);
+            setWishlistBooks(wishlistBooks);
         }
-        setReadBooks(storedBookId)
-    }, []) 
+    }, [books]);
 
     return (
         <div>
             <div className="text-center bg-gray-200 p-5 rounded-xl">
-                <h2 className="text-3xl font-bold">Books : {readBooks.length}</h2>
+                <h2 className="text-3xl font-bold">Books</h2>
             </div>
             <div className="text-center mt-6">
                 <details className="dropdown">
@@ -40,11 +41,15 @@ const ListedBooks = () => {
             <div>
                 <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                     <TabList>
-                        <Tab>Read Boooks</Tab>
+                        <Tab>Read Books</Tab>
                         <Tab>Wishlist Books</Tab>
                     </TabList>
-                    <TabPanel>Read Books data</TabPanel>
-                    <TabPanel>Wishlist Data</TabPanel>
+                    <TabPanel>
+                        <ReadBooks books={readBooks} ></ReadBooks>
+                    </TabPanel>
+                    <TabPanel>
+                        <WishList books={wishlistBooks} ></WishList>
+                    </TabPanel>
                 </Tabs>
             </div>
         </div>
