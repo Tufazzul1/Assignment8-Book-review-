@@ -1,18 +1,35 @@
+import { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveReadBook } from "../../Utility/Localstorage";
+
 const BooksDetails = () => {
     const books = useLoaderData();
     const { bookId } = useParams();
-    const bookIdInt = parseInt(bookId)
-    const book = books.find(book => book.bookId === bookIdInt)
+    const bookIdInt = parseInt(bookId);
+    const book = books.find(book => book.bookId === bookIdInt);
+
+    const [isRead, setIsRead] = useState(false);
 
     const handleRead = () => {
+        if (isRead) {
+            toast.error('You have already marked this book as read');
+        } else {
+            saveReadBook(bookIdInt);
+            setIsRead(true);
+            toast.success('Book marked as read');
+        }
+    };
 
-        saveReadBook(bookIdInt)
-        toast.success('books added ');
-    }
+    const handleWishList = () => {
+        if (!isRead) {
+            saveReadBook(bookIdInt);
+            toast.success('Book added to wish list');
+        } else {
+            toast.error('You have already read this book');
+        }
+    };
 
     return (
         <div className="lg:flex gap-6 mt-10">
@@ -43,10 +60,16 @@ const BooksDetails = () => {
                 <p>Years of Publish : <span className="font-bold">{book.yearOfPublishing}</span></p>
                 <p>Rating : <span className="font-bold"> {book.rating}</span></p>
 
+            
+                {/* Read and WisList Buttons */}
                 <div className="mt-6 space-x-3 flex">
+
                     <button onClick={handleRead} className="btn btn-info hover:bg-green-500 text-white">Read</button>
 
-                    <button className="btn btn-info hover:bg-green-500 text-white">Wish List</button>
+                    <button
+                        onClick={handleWishList}
+                        className="btn btn-info hover:bg-green-500 text-white">Wish List
+                        </button>
                 </div>
                 <ToastContainer />
             </div>
