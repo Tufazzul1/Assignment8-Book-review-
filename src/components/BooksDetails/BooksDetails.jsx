@@ -24,13 +24,14 @@ const BooksDetails = () => {
     };
 
     const handleWishList = () => {
-        if (!isWishList) {
+        if (isRead) {
+            toast.error('You have already marked this book as read');
+        } else if (!isWishList) {
             saveReadBook(bookIdInt);
             setWishList(true)
             toast.success('Book added to wish list');
-        }
-        else {
-            toast.error('You have already added this book in wish list');
+        } else {
+            toast.error('You have already added this book to the wishlist');
         }
     };
 

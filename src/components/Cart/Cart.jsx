@@ -7,8 +7,10 @@ const Cart = ({ book }) => {
     // console.log(book)
     return (
         <div>
-            <div className="card card-side bg-base-100 shadow-xl p-6">
-                <figure><img src={book.image} alt="Movie" /></figure>
+            <div className=" items-center justify-center bg-base-100 shadow-xl p-3 lg:p-6 lg:flex lg:flex-row flex flex-col">
+                <div className='w-[200px]'>
+                    <figure><img src={book.image} alt="Movie" /></figure>
+                </div>
                 <div className="card-body">
                     <h2 className="text-3xl font-bold">{book.bookName}</h2>
                     <h2 className="text-xl font-bold">By : {book.author}</h2>
@@ -30,8 +32,8 @@ const Cart = ({ book }) => {
 
                     <div className="space-x-4">
                         <span className='text-blue-500 bg-blue-200 rounded-3xl p-1'>Category : {book.category}</span>
-                        <span className='text-orange-500 bg-orange-200 rounded-3xl p-1'>Rating : {book.rating}</span>
-                        <button className="btn btn-primary rounded-full">View Details</button>
+                        <span className='text-orange-500 bg-orange-200 rounded-3xl p-1'>Rating : {book.rating}</span> <br />
+                        <button className="btn btn-primary rounded-full mt-3">View Details</button>
                     </div>
                 </div>
             </div>
