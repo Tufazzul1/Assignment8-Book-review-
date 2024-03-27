@@ -18,7 +18,7 @@ const ListedBooks = () => {
         const storedBookId = getStoredReadBook();
         if (books.length > 0) {
             const readBooks = books.filter(book => storedBookId.includes(book.bookId));
-            const wishlistBooks = books.filter(book => !storedBookId.includes(book.bookId));
+            const wishlistBooks = books.filter(book => storedBookId.includes(book.bookId));
             setReadBooks(readBooks);
             setWishlistBooks(wishlistBooks);
         }
@@ -33,8 +33,9 @@ const ListedBooks = () => {
                 <details className="dropdown">
                     <summary className="m-1 btn bg-sky-500 hover:bg-green-500 text-white">Sort By <RiArrowDropDownLine /></summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+                        <li><a>Rating</a></li>
+                        <li><a>Number of Pages</a></li>
+                        <li><a>Publisher Year</a></li>
                     </ul>
                 </details>
             </div>

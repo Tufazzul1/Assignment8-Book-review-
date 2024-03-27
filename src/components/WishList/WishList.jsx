@@ -4,7 +4,7 @@ import Cart from '../Cart/Cart';
 const WishList = ({books}) => {
     console.log(books)
     return (
-        <div>
+        <div className='space-y-6'>
             {
                 books.map(book => <Cart key={book.bookId} book={book}></Cart>)
             }

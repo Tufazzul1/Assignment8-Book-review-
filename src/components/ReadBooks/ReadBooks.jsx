@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import Cart from '../Cart/Cart';
 
 const ReadBooks = ({books}) => {
-    console.log(books)
+    // console.log(books)
     return (
         <div className='space-y-6'>
             {

@@ -11,6 +11,7 @@ const BooksDetails = () => {
     const book = books.find(book => book.bookId === bookIdInt);
 
     const [isRead, setIsRead] = useState(false);
+    const [isWishList, setWishList] = useState(false);
 
     const handleRead = () => {
         if (isRead) {
@@ -23,18 +24,20 @@ const BooksDetails = () => {
     };
 
     const handleWishList = () => {
-        if (!isRead) {
+        if (!isWishList) {
             saveReadBook(bookIdInt);
+            setWishList(true)
             toast.success('Book added to wish list');
-        } else {
-            toast.error('You have already read this book');
+        }
+        else {
+            toast.error('You have already added this book in wish list');
         }
     };
 
     return (
         <div className="lg:flex gap-6 mt-10">
             <div className="flex-1 flex justify-center items-center">
-                <img src={book.image} alt="" className="w-3/5 ml-6" />
+                <img src={book.image} alt="" className="w-3/5" />
             </div>
             <div className="flex-1 p-4">
                 <h3 className="text-4xl font-bold">{book.bookName}</h3>
@@ -60,7 +63,7 @@ const BooksDetails = () => {
                 <p>Years of Publish : <span className="font-bold">{book.yearOfPublishing}</span></p>
                 <p>Rating : <span className="font-bold"> {book.rating}</span></p>
 
-            
+
                 {/* Read and WisList Buttons */}
                 <div className="mt-6 space-x-3 flex">
 
@@ -69,7 +72,7 @@ const BooksDetails = () => {
                     <button
                         onClick={handleWishList}
                         className="btn btn-info hover:bg-green-500 text-white">Wish List
-                        </button>
+                    </button>
                 </div>
                 <ToastContainer />
             </div>
