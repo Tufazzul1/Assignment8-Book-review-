@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 
 const getPath = (x, y, width, height) => (
@@ -25,18 +25,20 @@ const PagesToRead = () => {
 
     }, []);
 
-    const readBooksData = localStorage.getItem('read-book')|| [];
+    const readBooksData = localStorage.getItem('read-book') || [];
     const readBooks = books.filter(book => readBooksData?.includes(book?.bookId));
     // console.log(readBooks)
 
     return (
         <div className="bg-gray-200 mt-10 p-2 lg:p-6 rounded-xl">
-            <BarChart width={1250} height={400} data={readBooks}>
-                <XAxis className="text-xs" dataKey="bookName" />
-                <YAxis className="text-xs" />
-                <Tooltip />
-                <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} />
-            </BarChart>
+            <ResponsiveContainer width="100%" height={400}>
+                <BarChart data={readBooks}>
+                    <XAxis className="text-xs" dataKey="bookName" />
+                    <YAxis className="text-xs" />
+                    <Tooltip />
+                    <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} />
+                </BarChart>
+            </ResponsiveContainer>
         </div>
     );
 };
