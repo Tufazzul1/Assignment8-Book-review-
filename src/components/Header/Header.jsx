@@ -7,7 +7,7 @@ const Header = () => {
         <li className="hover:border border-green-400"><NavLink to={'/'}>Home</NavLink></li>
         <li className="hover:border border-green-400"><NavLink to={'/books'}>Listed Books</NavLink></li>
         <li className="hover:border border-green-400"><NavLink to={'/pages'}>Pages To Read</NavLink></li>
-        <li className="hover:border border-green-400"><NavLink to={'/blogs'}>Blogs</NavLink></li>
+        <li className="hover:border border-green-400"><NavLink to={'/latestbooks'}>Latest Books</NavLink></li>
         <li className="hover:border border-green-400"><NavLink to={'/contact'}>Contact Us</NavLink></li>
         
     </>
