@@ -22,7 +22,7 @@ const LatestBooks = () => {
                     <figure><img src="https://i.ibb.co/kBWS0k5/kindpng-1064993.png" alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">The Great Gatsby</h2>
-                        <p> The Great Gatsby is a tragic tale of love, wealth, and the American Dream set in the Jazz Age. F. Scott Fitzgerald's lyrical prose and vivid imagery transport readers to the opulent world of Jay Gatsby and the disillusioned Nick Carraway. </p>
+                        <p> The Great Gatsby is a tragic tale of love, wealth, and the American Dream set in the Jazz Age. F. Scott Fitzgeralds lyrical prose and vivid imagery transport readers to the opulent world of Jay Gatsby and the disillusioned Nick Carraway. </p>
                         <div className="card-action">
                             <button className="btn btn-primary">Read Now</button>
                         </div>

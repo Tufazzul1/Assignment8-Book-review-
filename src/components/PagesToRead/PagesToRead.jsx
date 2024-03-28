@@ -25,10 +25,10 @@ const PagesToRead = () => {
 
     }, []);
 
-    const readBooksData = localStorage.getItem('read-book');
-    const readBooks = books.filter(book => readBooksData.includes(book?.bookId));
+    const readBooksData = localStorage.getItem('read-book')|| [];
+    const readBooks = books.filter(book => readBooksData?.includes(book?.bookId));
     // console.log(readBooks)
-    
+
     return (
         <div className="bg-gray-200 mt-10 p-2 lg:p-6 rounded-xl">
             <BarChart width={1250} height={400} data={readBooks}>

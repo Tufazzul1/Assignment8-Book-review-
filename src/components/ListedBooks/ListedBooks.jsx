@@ -17,12 +17,34 @@ const ListedBooks = () => {
     useEffect(() => {
         const storedBookId = getStoredReadBook();
         if (books.length > 0) {
-            const readBooks = books.filter(book => storedBookId.includes(book.bookId));
-            const wishlistBooks = books.filter(book => storedBookId.includes(book.bookId));
-            setReadBooks(readBooks);
-            setWishlistBooks(wishlistBooks);
+            const readBooks = books.filter(book => storedBookId?.includes(book.bookId));
+            const wishlistBooks = books.filter(book => storedBookId?.includes(book.bookId));
+            setReadBooks([...readBooks]);
+            setWishlistBooks([...wishlistBooks]);
         }
     }, [books]);
+
+    const sortByRating = () => {
+        const sortedByRating = [...readBooks].sort((a, b) => b.rating - a.rating);
+        setReadBooks(sortedByRating);
+        const sortedWishlistByRating = [...wishlistBooks].sort((a, b) => b.rating - a.rating);
+        setWishlistBooks(sortedWishlistByRating);
+    };
+
+    const sortByNumberOfPage = () => {
+        const sortedByTotalpage = [...readBooks].sort((a, b) => b.totalPages - a.totalPages);
+        setReadBooks(sortedByTotalpage);
+        const sortedWishlistByTotalpage = [...wishlistBooks].sort((a, b) => b.totalPages - a.totalPages);
+        setWishlistBooks(sortedWishlistByTotalpage);
+    };
+
+    const sortByPublishing = () => {
+        const sortedByPublishing = [...readBooks].sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+        setReadBooks(sortedByPublishing);
+        const sortedWishlistByPublishing = [...wishlistBooks].sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+        setWishlistBooks(sortedWishlistByPublishing);
+    };
+
 
     return (
         <div>
@@ -33,9 +55,9 @@ const ListedBooks = () => {
             <details className="dropdown">
                     <summary className="m-1 btn bg-sky-500 hover:bg-green-500 text-white">Sort By <RiArrowDropDownLine /></summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 space-y-2">
-                        <li><a> Rating</a></li>
-                        <li><a>Number of Pages</a></li>
-                        <li><a>Published Year</a></li>
+                        <li><button onClick={sortByRating}> Rating</button></li>
+                        <li><button onClick={sortByNumberOfPage}>Number of Pages</button></li>
+                        <li><button onClick={sortByPublishing}>Published Year</button></li>
                     </ul>
                 </details>
             </div>
@@ -58,5 +80,8 @@ const ListedBooks = () => {
 };
 
 export default ListedBooks;
+
+
+
 
 
