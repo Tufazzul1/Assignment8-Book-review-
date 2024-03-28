@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { getStoredReadBook } from "../../Utility/Localstorage";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -30,12 +30,12 @@ const ListedBooks = () => {
                 <h2 className="text-3xl font-bold">Books</h2>
             </div>
             <div className="text-center mt-6">
-                <details className="dropdown">
+            <details className="dropdown">
                     <summary className="m-1 btn bg-sky-500 hover:bg-green-500 text-white">Sort By <RiArrowDropDownLine /></summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 space-y-2">
-                        <Link>Rating</Link>
-                        <Link>Number of Pages</Link>
-                        <Link>Publisher Year</Link>
+                        <li><a> Rating</a></li>
+                        <li><a>Number of Pages</a></li>
+                        <li><a>Published Year</a></li>
                     </ul>
                 </details>
             </div>
@@ -58,3 +58,5 @@ const ListedBooks = () => {
 };
 
 export default ListedBooks;
+
+
